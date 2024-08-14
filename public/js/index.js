@@ -35,9 +35,19 @@ async function reloadTable() {
     renderTable();
 }
 
+
 async function main() {
 
+async function reloadTable(){
+    Members.data = await Members.service.getlist();
+    renderTable();
+}
+    
+async function main(){
+
+
     helloMyJs();
+    reloadTable();
 
     reloadTable();
 
@@ -45,6 +55,7 @@ async function main() {
         console.log(Members.form.getData());
         let _member = Members.form.getData();
         Members.service.add(_member);
+
         Members.data = await Members.service.getlist();
         Members.form.resetData();
         reloadTable();
@@ -53,6 +64,13 @@ async function main() {
     Members.form.buttonGetAll.addEventListener('click', async function () {
         Members.data = await Members.service.getlist();
         renderTable();
+
+        reloadTable();
+    });
+
+    Members.form.buttonGetAll.addEventListener('click', async function(){
+        reloadTable();
+
     });
 
 };
