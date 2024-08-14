@@ -1,5 +1,3 @@
-
-
 function memberModel(firstname,lastname,email,zipcode){
     return {
         firstname: firstname,
@@ -9,8 +7,4 @@ function memberModel(firstname,lastname,email,zipcode){
     }
 }
 
-
-
 export default memberModel;
-
-//export { memberModel };

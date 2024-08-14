@@ -52,6 +52,11 @@
         <div class="col">
           <button type="button" id="btnGetAll" class="btn btn-primary">Get All</button>
           <button type="button" id="btnAdd" class="btn btn-primary">ADD</button>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#zipToolModal">
+            ZipTool
+          </button>
+
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             ZipTool
           </button> 
@@ -89,7 +94,7 @@
     </div>
     <div class="row">
       <!-- Button trigger modal -->
-      
+
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -109,6 +114,55 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="zipToolModal" tabindex="-1" aria-labelledby="zipToolModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-4">
+          <div class="modal-header">
+            <h5 class="modal-title" id="zipToolModalLabel">Location Information</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="provinceSelect">province</label>
+                  <select id="provinceSelect" class="form-select">
+                    <!-- Options will be dynamically loaded -->
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="amphoeSelect">amphoe</label>
+                  <select id="amphoeSelect" class="form-select">
+                    <!-- Options will be dynamically loaded -->
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="tambonSelect">tambon</label>
+                  <select id="tambonSelect" class="form-select">
+                    <!-- Options will be dynamically loaded -->
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="zipcodeSelect">zipcode</label>
+                  <select id="zipcodeSelect" class="form-select">
+                    <!-- Options will be dynamically loaded -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveZipCode">Get ZipCode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

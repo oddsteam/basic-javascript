@@ -1,4 +1,3 @@
-
 let txtFirstName = document.getElementById('txtFirstName');
 let txtLastName = document.getElementById('txtLastName');
 let txtEmail = document.getElementById('txtEmail');
